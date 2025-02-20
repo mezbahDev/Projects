@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Gallery with Sound</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="gallery-audio" loop muted>
+      <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+      <span style="--i: 1"><img src="Img/1.jpg" alt="" /></span>
+      <span style="--i: 2"><img src="Img/2.jpg" alt="" /></span>
+      <span style="--i: 3"><img src="Img/3.jpg" alt="" /></span>
+      <span style="--i: 4"><img src="Img/4.jpg" alt="" /></span>
+      <span style="--i: 5"><img src="Img/5.jpg" alt="" /></span>
+      <span style="--i: 6"><img src="Img/6.jpg" alt="" /></span>
+      <span style="--i: 7"><img src="Img/7.jpg" alt="" /></span>
+      <span style="--i: 8"><img src="Img/8.jpg" alt="" /></span>
+    </div>
+
+    <script>
+      window.addEventListener("keydown", function (event) {
+        if (event.key === " " || event.key === "Enter") { // Press spacebar or Enter to play
+          let audio = document.getElementById("gallery-audio");
+          audio.muted = false; 
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+        }
+      });
+    </script>
+  </body>
+</html>

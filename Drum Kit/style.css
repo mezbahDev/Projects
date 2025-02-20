@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(Drum.jpg);
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.key{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    background-color: rgba(124, 124, 124, 0.6);
+    color: white;
+    font-size: 3rem;
+    border-radius: 10px;
+    border: 5px solid black;
+    cursor: pointer;
+    transition: all .07s;
+}
+
+.playing{
+    border: 8px solid rgb(255, 235, 52);
+    transition: transform .07s, border 0.2s;
+    transform: scale(1.1);
+}
+
+.sound{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: rgb(255, 235, 52);
+    letter-spacing: 2.5px;
+    font-weight: 600;
+}

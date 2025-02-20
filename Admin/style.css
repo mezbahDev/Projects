@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh; 
+    font-family: 'Poppins';
+    background-color: #F5F5F9;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 255px;
+    background-color: #363740;
+    transition: all 0.3s ease-in-out;  /* transition for smooth effect*/
+    left: 0;
+    top: 0;
+}
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar li{
+    list-style: none;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #50515a;
+}
+
+.text{
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffff;
+}
+
+
+.page{
+    margin-left: 255px;
+    width: calc(100%-225px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 110px;
+}
+
+/* Front Navbar*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 255px;
+    width: calc(100% - 255px);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+}
+
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hello {
+    font-size: 20px;
+    color: #333;
+}
+
+.search-box {
+    position: relative; 
+    width: 300px; 
+    margin-right: 20px;
+}
+
+.search {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Progress */
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: calc(100% - 255px); 
+    margin-left: 255px;
+    margin-top: 10px; 
+}
+
+
+.progress {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 280px; 
+    height: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.progress-ring{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-left: 15px;
+    transform: rotate(-90deg);
+}
+
+.progress-container .progress .text{
+    display: flex;
+    flex-direction: column;
+    color: rgb(160, 153, 153);
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.progress-ring-circle {
+    fill: transparent;
+    stroke: blue;
+    stroke-width: 4;
+    stroke-dasharray: 125.6;
+    stroke-dashoffset: 31.4;
+    stroke-linecap: round;
+    animation: rotateProgress 2s linear infinite;
+}
+
+.progress-container .progress .income{
+    font-size: 20px;
+    font-weight: bold;
+    color: #505050;
+}
